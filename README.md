@@ -50,7 +50,7 @@ sh train_cifar100_shadow_models.sh
 ``` 
 
 ### ImageNet shadow models
-For ImageNet we use pre-trained models from [Feldman and Zhang](https://github.com/google-research/heldout-influence-estimation). We provide code to convert these models to pytorch in `./train/imagenet_shadow_models` directory. Set the path to ImageNet `libdata/indexed_tfrecords.py`. 
+For ImageNet we use pre-trained models from [Feldman and Zhang](https://github.com/google-research/heldout-influence-estimation), [Feldman and Zhang ImageNet ResNet50 redirect link](http://storage.googleapis.com/gresearch/heldout-training-checkpoints/imagenet-resnet50.tar.gz). We provide code to convert these models to pytorch in `./train/imagenet_shadow_models` directory. Set the path to ImageNet `libdata/indexed_tfrecords.py`. 
 
 1. Please download `imagenet_index.npz` from [Feldman and Zhang](https://github.com/google-research/heldout-influence-estimation) and place it in `build_fz_imagenet/`
 2. Use the `build_imagenet.py` in the `build_fz_imagenet` directory to convert to TFRecord dataset.
@@ -101,7 +101,7 @@ To reproduce our results we have provided the assets [here](https://engineering.
     ```
 2. Download the `CIFAR susbet indices` to <path_to_susbet_indices> and set `"subset_idxs_dir"` in config.json.
 
-3. For Imagenet results download the imagenet models from [Feldman and Zhang](https://github.com/google-research/heldout-influence-estimation) and set <path_to_fz_imagenet_models> for `"imagenet_models_dir"` and the extracted models should follow the folder structure below.
+3. For Imagenet results download the imagenet models from [Feldman and Zhang](https://github.com/google-research/heldout-influence-estimation), [Feldman and Zhang ImageNet ResNet50 redirect link](http://storage.googleapis.com/gresearch/heldout-training-checkpoints/imagenet-resnet50.tar.gz) and set <path_to_fz_imagenet_models> for `"imagenet_models_dir"` and the extracted models should follow the folder structure below.
     ```
     <path_to_fz_imagenet_models>
     └── imagenet-resnet50
