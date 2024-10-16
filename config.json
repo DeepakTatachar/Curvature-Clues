@@ -1,0 +1,8 @@
+{
+    "data_dir": "./data",
+    "precomputed_scores_dir": "<path_to_score>",
+    "subset_idxs_dir": "<path_to_indices>",
+    "connection_string": "<optional> Azure Blob stroage connection_string when using cloud for saving scores",
+    "imagenet_models_dir": "<path_to_fz_imagenet_models>",
+    "imagenet_index_dir": "<path_to_imagenet_index.npz>"
+}
