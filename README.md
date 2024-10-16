@@ -11,6 +11,8 @@ This is the official implementation for the paper "Curvature Clues: Decoding Dee
 }
 ```
 
+Read our [paper](https://arxiv.org/abs/2407.02747).
+
 ## Environment
 This code is tested and validated with python 3.9 and 3.11. To replicate our environment please use the `environment.yml` file provided by running
 ```
