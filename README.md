@@ -21,7 +21,7 @@ conda env update -n py3.9_curv_clues --file environment.yml
 2. **Compute Scores** Next we compute the scores for various MIA methods, this code is found in `./precompute_scores` directory. The code uses Azure blob storage to save the scores, modifications to the code maybe needed to save locally.
 3. **Results** Next we fetch the precomputed scores to get the results. The code for which are in the root directory and correspond to the notebook (i.e. `*.ipynb` files) 
 
-Note we have released the pretrained shadow models and the scores, thus you can skip step 1 and step 2 by downloading the precomputed scores from our project page [here]()
+Note we have released the pretrained shadow models and the scores, thus you can skip step 1 and step 2 by downloading the precomputed scores from our project page [here](https://engineering.purdue.edu/NRL/projects/curvature-clues)
 
 ## Training Shadow Models
 
@@ -122,9 +122,9 @@ We describe the files and implementations below
 | `conditonal_mia_aug_cifar10.ipynb` | Provides the results for MIA attack using various methods and reproduces results from Table 1 for CIFAR10 |
 | `conditonal_mia_aug_cifar100.ipynb` | Provides the results for MIA attack using various methods and reproduces results from Table 1 for CIFAR100 |
 | `conditonal_mia_aug_imagenet.ipynb` | Provides the results for MIA attack using various methods and reproduces results from Table 1 for ImageNet |
-| `conditonal_mia_aug_v_m_random.ipynb` | Provides the results for experiments under `Effect of Dataset Size` section of the paper when models are trained on random susbets |
-| `conditonal_mia_aug_v_m_top.ipynb` | Provides the results for experiments under `Effect of Dataset Size` section of the paper when models are trained on most memroized susbets according to [Feldman and Zhang](https://github.com/google-research/heldout-influence-estimation) |
+| `conditonal_mia_aug_v_m_random.ipynb` | Provides the results for experiments under `Effect of Dataset Size` section of the paper when models are trained on random subsets |
+| `conditonal_mia_aug_v_m_top.ipynb` | Provides the results for experiments under `Effect of Dataset Size` section of the paper when models are trained on most memorized subsets according to [Feldman and Zhang](https://github.com/google-research/heldout-influence-estimation) |
 | `conditonal_mia_aug_dp.ipynb` | Provides the results for experiments under `Effect of Privacy` section of the paper |
 
-For ease of reproducability we have released our pretrained shadow models and precomputed scores used by the ipynb files on our [project page linked here](https://engineering.purdue.edu/NRL/projects/curvature-clues) where you can download these models and scores files. You can extract the precomputed scores files and set the locations in `config.json`.
+For ease of reproducibility we have released our pretrained shadow models and precomputed scores used by the ipynb files on our [project page linked here](https://engineering.purdue.edu/NRL/projects/curvature-clues) where you can download these models and scores files. You can extract the precomputed scores files and set the locations in `config.json`.
 
