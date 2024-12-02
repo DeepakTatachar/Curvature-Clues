@@ -11,7 +11,7 @@ This is the official implementation for the paper "Curvature Clues: Decoding Dee
 }
 ```
 
-You can find our [paper here](https://arxiv.org/abs/2407.02747).
+You can find our [paper here](https://openreview.net/pdf?id=ZEVDMQ6Mu5).
 
 ## Environment
 This code is tested and validated with python 3.9 and 3.11. To replicate our environment please use the `environment.yml` file provided by running
@@ -21,9 +21,9 @@ conda env update -n py3.9_curv_clues --file environment.yml
 ## Code Flow
 1. **Training Shadow Models** The first step is to train shadow models whose code can be found in `./train` directory.
 2. **Compute Scores** Next we compute the scores for various MIA methods, this code is found in `./precompute_scores` directory. The code uses Azure blob storage to save the scores, modifications to the code maybe needed to save locally.
-3. **Results** Next we fetch the precomputed scores to get the results. The code for which are in the root directory and correspond to the notebook (i.e. `*.ipynb` files) 
+3. **Results** Next we fetch the precomputed scores to get the results. The code for which is in the root directory and corresponds to the notebook (i.e. `*.ipynb` files) 
 
-Note we have released the pretrained shadow models and the scores, thus you can skip step 1 and step 2 by downloading the precomputed scores from our project page [here](https://engineering.purdue.edu/NRL/projects/curvature-clues)
+Note we have released the pretrained shadow models and the scores, thus you can skip steps 1 and step 2 by downloading the precomputed scores. see the [Assets download links](https://github.com/DeepakTatachar/Curvature-Clues/edit/main/README.md#assets-download-links) section below.
 
 ## Training Shadow Models
 
@@ -78,7 +78,7 @@ To calculate the scores on CIFAR10 set the `data_dir` variable in `./scripts/pre
 sh precompute_cifar10_scores.sh
 ```
 ### ImageNet
-To calculate the scores on ImageNet set the copy the files to the root directory and run
+To calculate the scores on ImageNet set copy the files to the root directory and run
 ```
 sh precompute_imagenet_scores.sh
 ```
@@ -86,9 +86,9 @@ sh precompute_imagenet_scores.sh
 ## Reproducing our Results
 
 ### Setup
-To reproduce our results we have provided the assets [here](https://engineering.purdue.edu/NRL/projects/curvature-clues). 
+To reproduce our results we have provided the assets, see the [Assets download links](https://github.com/DeepakTatachar/Curvature-Clues/edit/main/README.md#assets-download-links) section below. 
 
-1. Extract `"precomputed scores"` such that it has the folwing structure and set the `"precomputed_scores_dir"` in `config.json` to <path_to_score>.
+1. Extract `"precomputed scores"` such that it has the following structure and set the `"precomputed_scores_dir"` in `config.json` to <path_to_score>.
 
     ```
     <path_to_score>/precomputed_scores/
@@ -128,5 +128,7 @@ We describe the files and implementations below
 | `conditonal_mia_aug_v_m_top.ipynb` | Provides the results for experiments under `Effect of Dataset Size` section of the paper when models are trained on most memorized subsets according to [Feldman and Zhang](https://github.com/google-research/heldout-influence-estimation) |
 | `conditonal_mia_aug_dp.ipynb` | Provides the results for experiments under `Effect of Privacy` section of the paper |
 
-For ease of reproducibility we have released our pretrained shadow models and precomputed scores used by the ipynb files on our [project page linked here](https://engineering.purdue.edu/NRL/projects/curvature-clues) where you can download these models and scores files. You can extract the precomputed scores files and set the locations in `config.json`.
+
+## Assets download links
+For ease of reproducibility we have released our [pretrained shadow models](https://purdue0-my.sharepoint.com/:u:/g/personal/dravikum_purdue_edu/EWaBLzMIfbZLifhxGqLbP7sB8r4EcXWzbynPTihGxmKUTg?e=7OPphx) and [precomputed scores](https://purdue0-my.sharepoint.com/:u:/g/personal/dravikum_purdue_edu/EVRwjg8PD35FnFggcm_52c8Bx4dkVGpAnwNiiPWu8g7UjQ?e=XgusLA) used by the ipynb files, you can download these models and scores files. Additionally, we also provide the subset idxs of the original dataset [here](https://purdue0-my.sharepoint.com/:u:/g/personal/dravikum_purdue_edu/EfR2gfV8pB1JjK-iXlTIx6MBGW8tv5kSQhg1_f1oYGqehA?e=i8p78h). You can extract the precomputed scores files and set the locations in `config.json`.
 
