@@ -23,7 +23,7 @@ conda env update -n py3.9_curv_clues --file environment.yml
 2. **Compute Scores** Next we compute the scores for various MIA methods, this code is found in `./precompute_scores` directory. The code uses Azure blob storage to save the scores, modifications to the code maybe needed to save locally.
 3. **Results** Next we fetch the precomputed scores to get the results. The code for which is in the root directory and corresponds to the notebook (i.e. `*.ipynb` files) 
 
-Note we have released the pretrained shadow models and the scores, thus you can skip steps 1 and step 2 by downloading the precomputed scores. see the [Assets download links](https://github.com/DeepakTatachar/Curvature-Clues/edit/main/README.md#assets-download-links) section below.
+Note we have released the pretrained shadow models and the scores, thus you can skip steps 1 and step 2 by downloading the precomputed scores. see the [Assets download links](https://github.com/DeepakTatachar/Curvature-Clues/blob/main/README.md#assets-download-links) section below.
 
 ## Training Shadow Models
 
@@ -86,7 +86,7 @@ sh precompute_imagenet_scores.sh
 ## Reproducing our Results
 
 ### Setup
-To reproduce our results we have provided the assets, see the [Assets download links](https://github.com/DeepakTatachar/Curvature-Clues/edit/main/README.md#assets-download-links) section below. 
+To reproduce our results we have provided the assets, see the [Assets download links](https://github.com/DeepakTatachar/Curvature-Clues/blob/main/README.md#assets-download-links) section below. 
 
 1. Extract `"precomputed scores"` such that it has the following structure and set the `"precomputed_scores_dir"` in `config.json` to <path_to_score>.
 
